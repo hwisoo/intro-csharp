@@ -4,9 +4,9 @@ namespace Dealership{
 
 class Car 
 {
-  public string MakeModel;
-  public int Price;
-  public int Miles;
+  private string MakeModel;
+  private int Price;
+  private int Miles;
   public Car(string makeModel, int price, int miles)
   {
     MakeModel = makeModel;
@@ -14,6 +14,25 @@ class Car
     Miles = miles;
   }
 
+  public string GetMakeModel()
+  {
+    return MakeModel;
+  }
+
+  public int GetPrice()
+  {
+    return Price;
+  }
+
+  public void SetPrice(int newPrice)
+  {
+    Price = newPrice;
+  }
+
+  public int GetMiles()
+  {
+    return Miles;
+  }
   public bool WorthBuying(int maxPrice)
   {
     return (Price < maxPrice);
